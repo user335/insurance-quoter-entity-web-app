@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>*@
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-12 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Welcome to FIQ, the fastest car insurance quoter on the internet</h5>
+            <p>
+                Note: all quotes are 100% guaranteed to be fictitious
+            </p>
+        </div>
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+        {
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+            </div>
+            <div class="form-group col-md-6">
+                <input name="LastName" type="text" class="form-control" placeholder="Last Name"/>
+            </div>
+            <div class="form-group col-md-6">
+                <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address"/>
+            </div>
+            <div class="form-group col-md-6">
+                Date Of Birth
+                <input name="DateOfBirth" type="date" class="form-control" />
+            </div>
+            <div class="form-group col-md-6">
+                <input name="CarYear" type="number" class="form-control" placeholder="Car Year"/>
+            </div>
+            <div class="form-group col-md-6">
+                <input name="CarMake" type="text" class="form-control" placeholder="Car Make"/>
+            </div>
+            <div class="form-group col-md-6">
+                <input name="CarModel" type="text" class="form-control" placeholder="Car Model"/>
+            </div>
+            <div class="form-group col-md-6">
+                Had a previous dui? <input name="HadAPreviousDUI" type="checkbox" value="true" class="form-control" />
+                <input type="hidden" value="false" name="HadAPreviousDUI" />
+            </div>
+            <div class="form-group col-md-6">
+                <input name="NumberOfSpeedingTickets" type="number" class="form-control" placeholder="Number of speeding tickets"/>
+            </div>
+            <div class="form-group col-md-6">
+                Full coverage desired?
+                <input name="FullCoverageDesired" type="checkbox" value="true" class="form-control" />
+                <input type="hidden" value="false" name="FullCoverageDesired" />
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+        </div>
+        }
+
+    </div>
+</div>

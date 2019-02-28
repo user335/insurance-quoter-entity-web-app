@@ -1,0 +1,47 @@
+﻿
+@using insuranceQuoter.ViewModels;
+
+@model List<QuoteVm>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-12 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Quotes</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    First Name
+                </div>
+                <div class="col-md-3">
+                    Last Name
+                </div>
+                <div class="col-md-5">
+                    Email Address
+                </div>
+                <div class="col">
+                    Quote
+                </div>
+            </div>
+            <br/>
+
+            @foreach (var insuranceQuote in Model)
+            {
+                <div class="row">
+                    <div class="col">
+                        @insuranceQuote.firstName
+                    </div>
+                    <div class="col-md-3">
+                        @insuranceQuote.lastName
+                    </div>
+                    <div class="col-md-5">
+                        @insuranceQuote.emailAddress
+                    </div>
+                    <div class="col">
+                        @insuranceQuote.quotedPrice
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
